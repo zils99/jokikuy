@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+body{
+    font-family: Garamond, serif;
+    background: #e9e1cfbc; 
+}
+
+.isikonten{
+    margin: 0rem 3rem; 
+}
+
+nav{
+    margin-bottom: 20px;
+    background-color: #464542;
+}
+
+.nav-link {
+    margin : 0px 1rem; 
+    color: #e9e1cfbc;
+}
+
+.nav-link.active {
+    background-color: #C0C0C0;
+}
+
+.nav-link:hover{
+    background-color: white;
+}
+
+.kontakjoki{
+    margin-top: 1rem;
+}
