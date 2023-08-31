@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="css/profile.css">
-    <title>Profile</title>
+    <title>Cari Game</title>
 </head>
 
 <body>
@@ -25,7 +25,7 @@
                             <a class="nav-link" href="#">Kontrak</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">Profile</a>
+                            <a class="nav-link" href="#">Profile</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Logout</a>
@@ -41,22 +41,18 @@
         <div class="row">
             <div class="col-xl-4">
                 <!-- Profile picture card-->
-                <div class="card mb-4 mb-xl-0">
-                    <div class="card-header">Foto Profile</div>
+                <div class="gambargame mb-4 mb-xl-0">
                     <div class="card-body text-center">
                         <!-- Profile picture image-->
-                        <img class="img-account-profile rounded-circle mb-2"
-                            src="http://bootdey.com/img/Content/avatar/avatar1.png" alt="">
+                        <img class="imggame" src="http://bootdey.com/img/Content/avatar/avatar1.png" alt="">
                         <!-- Profile picture help block-->
                         <div class="small font-italic text-muted mb-4"></div>
-                        <!-- Profile picture upload button-->
-                        <button class="btn btn-primary" type="button">Upload Gambar Baru</button>
                     </div>
                 </div>
             </div>
             <div class="col-xl-8">
                 <div class="card mb-4">
-                    <div class="card-header">Pengaturan Akun</div>
+                    <div class="card-header">Genshin Impact</div>
                     <div class="card-body">
                         <form>
                             <div class="mb-3">
@@ -73,27 +69,6 @@
                                 <input class="form-control" id="inputEmailAddress" type="email"
                                     placeholder="Laki-laki">
                             </div>
-                            <button class="btn btn-primary" type="button">Save changes</button>
-                        </form>
-                    </div>
-                </div>
-
-                <div class="card mb-4">
-                    <div class="card-header">Pengaturan Password</div>
-                    <div class="card-body">
-                        <form>
-                            <div class="row gx-3 mb-3">
-                                <div class="col-md-6">
-                                    <label class="small mb-1" for="inputFirstName">Password Lama</label>
-                                    <input class="form-control" id="inputFirstName" type="password">
-                                </div>
-                                <!-- Form Group (last name)-->
-                                <div class="col-md-6">
-                                    <label class="small mb-1" for="inputLastName">Password Baru</label>
-                                    <input class="form-control" id="inputLastName" type="password">
-                                </div>
-                            </div>
-                            <!-- Save changes button-->
                             <button class="btn btn-primary" type="button">Save changes</button>
                         </form>
                     </div>
