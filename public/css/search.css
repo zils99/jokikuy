@@ -27,9 +27,7 @@ nav{
 .card {
     box-shadow: 0 0.15rem 1.75rem 0 rgb(33 40 50 / 15%);
 }
-.card .card-header {
-    font-weight: 500;
-}
+
 .card-header:first-child {
     border-radius: 0.35rem 0.35rem 0 0;
 }
@@ -79,10 +77,21 @@ nav{
 }
 
 .imggame{
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
 }
 
-.card-header{
+.imgdetail{
+    width: 200px;
+    height: 200px;
+}
+
+.card .card-header{
     font-size: 50px;
+    font-weight: 1000;
+}
+
+.deskripsigame{
+    text-align: justify;
+    text-justify: inter-word;
 }

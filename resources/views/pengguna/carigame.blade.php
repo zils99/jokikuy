@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/search.css">
     <title>Cari Game</title>
 </head>
 
@@ -36,10 +36,9 @@
         </div>
     </nav>
 
-    <div class="container-xl px-4 mt-4">
-        <hr class="mt-0 mb-4">
+    <div class="container-xl px-3 mt-4">
         <div class="row">
-            <div class="col-xl-4">
+            <div class="col-xl-3">
                 <!-- Profile picture card-->
                 <div class="gambargame mb-4 mb-xl-0">
                     <div class="card-body text-center">
@@ -50,26 +49,29 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-8">
+            <div class="col-xl-9">
                 <div class="card mb-4">
                     <div class="card-header">Genshin Impact</div>
                     <div class="card-body">
                         <form>
-                            <div class="mb-3">
-                                <label class="small mb-1" for="inputUsername">Nama Lengkap</label>
-                                <input class="form-control" id="inputUsername" type="text" placeholder="Billy">
-                            </div>
-                            <div class="mb-3">
-                                <label class="small mb-1" for="inputEmailAddress">Email address</label>
-                                <input class="form-control" id="inputEmailAddress" type="email"
-                                    placeholder="testing@gmail.com">
-                            </div>
-                            <div class="mb-3">
-                                <label class="small mb-1" for="inputEmailAddress">Gender</label>
-                                <input class="form-control" id="inputEmailAddress" type="email"
-                                    placeholder="Laki-laki">
-                            </div>
-                            <button class="btn btn-primary" type="button">Save changes</button>
+                            <p class="deskripsigame">
+                                Genshin Impact adalah RPG petualangan dunia terbuka.
+                                <br>
+                                <br>
+                                Berangkat dalam perjalanan melintasi dunia fantasi bernama Teyvat. Di dunia yang luas
+                                ini, jelajahi tujuh negara, temui beragam karakter dengan kepribadian dan kemampuan
+                                unik, dan lawan musuh kuat bersama mereka, semuanya dalam perjalanan pencarian Anda
+                                untuk menemukan saudara Anda yang hilang.
+                                <br>
+                                <br>
+                                Berkeliaran dengan bebas, benamkan diri Anda dalam dunia yang penuh dengan kehidupan,
+                                dan biarkan rasa takjub membawa Anda mengungkap semua misterinya.
+                                <br>
+                                <br>
+                                Begitulah, hingga kamu akhirnya bisa bertemu kembali dengan saudaramu yang hilang dan
+                                menjadi saksi puncak dari segala hal di akhir perjalananmu.
+                            </p>
+                            <button class="btn btn-primary float-end" type="button">Buat Kontrak Sekarang!</button>
                         </form>
                     </div>
                 </div>
@@ -77,7 +79,75 @@
         </div>
     </div>
 
+    <div class="container-xl px-3 mt-4">
+        <div class="row">
+            <div class="col-xl-3">
 
+            </div>
+            <div class="col-xl-9">
+                <div class="card mb-4">
+                    <div class="card-header">Apa aja yang dapat dikontrakkan?</div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-xl-4">
+                                <div class="card sm-4">
+                                    <div class="card">
+                                        <img src="http://bootdey.com/img/Content/avatar/avatar1.png"
+                                            class="imgdetail mx-auto mt-4 mb-2" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Mora</h5>
+                                            <p class="card-text">Kalian kekurangan Mora? Kami bisa mencarinya untuk
+                                                kalian.
+                                                Tinggal
+                                                duduk manis saja dan kami akan menyelesaikan secepatnya</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4">
+                                <div class="card sm-4">
+                                    <img src="http://bootdey.com/img/Content/avatar/avatar1.png"
+                                        class="imgdetail mx-auto mt-4 mb-2" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and
+                                            make
+                                            up the
+                                            bulk
+                                            of the card's content.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4">
+                                <div class="card sm-4">
+                                    <div class="card">
+                                        <img src="http://bootdey.com/img/Content/avatar/avatar1.png"
+                                            class="imgdetail mx-auto mt-4 mb-2" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and
+                                                make
+                                                up the
+                                                bulk
+                                                of the card's content.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-xl px-3 mt-4 mb-5">
+        <div class="row">
+            <div class="col-xl-3">
+
+            </div>
+
+        </div>
     </div>
 
 </body>
