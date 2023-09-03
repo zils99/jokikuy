@@ -17,8 +17,8 @@
             <div class="isisec1">
                 <p style="font-size: 200px">Joki kuy</p>
                 <p style="font-size: 35px">Tempat dimana akun anda menjadi top global</p>
-                <button class="button1">Login</button>
-                <button class="button1">Sign Up</button>
+                <a href="/login"><button class="button1">Login</button></a>
+                <a href="/register"><button class="button1">Daftar</button></a>
             </div>
         </section>
 

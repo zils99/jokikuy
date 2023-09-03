@@ -54,7 +54,8 @@
                     </div>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary mt-3">Submit</button>
+            <button type="submit" class="btn btn-primary mt-3 mb-3">Daftar Sekarang!</button>
+            <small>Sudah punya akun? <a href="/login">Login Sekarang!</a></small>
         </form>
     </div>
 </body>

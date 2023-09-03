@@ -23,7 +23,8 @@
                 <label for="exampleInputPassword1" class="form-label">Password</label>
                 <input type="password" class="form-control">
             </div>
-            <button type="submit" class="btn btn-primary mt-3">Login</button>
+            <button type="submit" class="btn btn-primary mt-3 mb-3">Login</button>
+            <small>belum punya akun? ayok daftar kan akun kamu <a href="/register">disini</a></small>
         </form>
     </div>
 </body>
