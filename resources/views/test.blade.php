@@ -12,9 +12,15 @@
     <div>
         <?php
         use Illuminate\Support\Facades\DB;
-        if (DB::connection()->getPdo()) {
-            echo 'Successfully connected to DB and DB name is ' . DB::connection()->getDatabaseName();
+        
+        // Test database connection
+        try {
+            DB::connection()->getPdo();
+            echo 'berhasil';
+        } catch (\Exception $e) {
+            die('Could not connect to the database.  Please check your configuration. error:' . $e);
         }
+        
         ?>
     </div>
 </body>
