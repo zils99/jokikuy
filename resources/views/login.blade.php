@@ -13,7 +13,7 @@
 
 <body>
     <div class="container-fluid">
-        <form class="mx-auto">
+        <form class="mx-auto" action="/login">
             <h4 class="text-center">Login</h4>
             <div class="mb-3 mt-3">
                 <label for="exampleInputEmail1" class="form-label">Username</label>

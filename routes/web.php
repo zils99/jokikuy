@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\ControllerUser;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,16 +16,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('test');
+    return view('landing');
 });
 
-Route::get('/login', function () {
-    return view('login');
-});
+Route::get('/login', [ControllerUser::class, 'Login']);
+Route::get('/register', [ControllerUser::class, 'Register']);
+Route::post('/register', [ControllerUser::class, 'TambahUser']);
 
-Route::get('/register', function () {
-    return view('register');
-});
 
 Route::get('/homepengguna', function () {
     return view('pengguna/homepengguna');
