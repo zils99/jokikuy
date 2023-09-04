@@ -11,7 +11,6 @@
 <body>
     <div>
         <?php
-        use Illuminate\Support\Facades\DB;
         
         // Test database connection
         try {

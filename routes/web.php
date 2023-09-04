@@ -19,14 +19,12 @@ Route::get('/', function () {
     return view('landing');
 });
 
-Route::get('/login', [ControllerUser::class, 'Login']);
+Route::get('/login', [ControllerUser::class, 'index']);
 Route::get('/register', [ControllerUser::class, 'Register']);
+Route::get('/homepengguna', [ControllerUser::class, 'homepengguna']);
+Route::get('/logout', [ControllerUser::class, 'logout']);
+Route::post('/login', [ControllerUser::class, 'login']);
 Route::post('/register', [ControllerUser::class, 'TambahUser']);
-
-
-Route::get('/homepengguna', function () {
-    return view('pengguna/homepengguna');
-});
 
 Route::get('/carigame', function () {
     return view('pengguna/carigame');

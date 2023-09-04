@@ -13,15 +13,16 @@
 
 <body>
     <div class="container-fluid">
-        <form class="mx-auto" action="/login">
+        <form class="formlogin mx-auto" action="/login" method="post">
+            @csrf
             <h4 class="text-center">Login</h4>
             <div class="mb-3 mt-3">
-                <label for="exampleInputEmail1" class="form-label">Username</label>
-                <input type="text" class="form-control">
+                <label for="exampleInputEmail1" class="form-label">Email</label>
+                <input type="email" class="form-control" name="email">
             </div>
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control">
+                <input type="password" class="form-control" name="password">
             </div>
             <button type="submit" class="btn btn-primary mt-3 mb-3">Login</button>
             <small>belum punya akun? ayok daftar kan akun kamu <a href="/register">disini</a></small>

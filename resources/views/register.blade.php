@@ -13,7 +13,7 @@
 
 <body>
     <div class="container-fluid">
-        <form class="mx-auto" action="/register" method="post">
+        <form class="formregister mx-auto" action="/register" method="post">
             @csrf
             <h4 class="text-center">Register</h4>
             <div class="row">
