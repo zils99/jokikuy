@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href=" {{ asset('css/home.css') }}">
     <title>Home</title>
 </head>
 
@@ -15,8 +15,9 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <div class="collapse navbar-collapse" id="navbarText">
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <form class="d-flex" role="search" action="/carigame" method="get">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                        name="carigame">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
                 <span class="collapse navbar-collapse justify-content-end">

@@ -64,7 +64,8 @@ class ControllerUser extends Controller
 
     public function homepengguna()
     {
-        $datagame = Game::all();
+        $datagame['game'] = Game::all();
+        $datagame['user'] = User::where('c_IdUser', '=', session()->get('c_IdUser'))->first();
         return view('pengguna/homepengguna')->with('datagame', $datagame);
     }
 
@@ -102,5 +103,18 @@ class ControllerUser extends Controller
             ]);
             return redirect('/profilepengguna')->with('update', 'Data User Berhasil di Update');
         }
+    }
+
+    public function carigame(Request $request)
+    {
+        $datagame['game'] = Game::where('c_NamaGame', 'like', '%' . $request->input('carigame') . '%')->get();
+        $datagame['search'] = $request->input('carigame');
+        return view('pengguna/carigame')->with('datagame', $datagame);
+    }
+
+    public function detailgame($id)
+    {
+        $datagame = Game::where('c_IdGame', '=', $id)->first();
+        return view('pengguna/detailgame')->with('datagame', $datagame);
     }
 }

@@ -2,7 +2,7 @@
 
 @section('container')
     <div class="isikonten">
-        <h1>Kontrak Game /Nama User/</h1>
+        <h1>Kontrak Game {{ $datagame['user']->c_NamaUser }}</h1>
         <div class="card mb-3" style="max-width: 540px;">
             <div class="row g-0">
                 <div class="col-md-4">
@@ -29,16 +29,15 @@
 
         <h1>Game yang sering dimainkan</h1>
 
-        <div class="row">
-            @foreach ($datagame as $game)
-                <div class="col-sm-4">
-                    <div class="card" style="width: 25rem;">
+        <div class="row mb-5">
+            @foreach ($datagame['game'] as $game)
+                <div class="col-sm-3">
+                    <div class="card">
                         <img src="{{ asset('img/' . $game['c_GambarGame']) }}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">{{ $game['c_NamaGame'] }}</h5>
-                            <p class="card-text">{{ $game['c_DeskripsiGame'] }}</p>
-                            <p>Genre Game : </p>
-                            <a href="#" class="btn btn-primary">Buat Kontrak</a>
+                            <p> Genre Game : </p>
+                            <a href="#" class="btn btn-primary float-end">Detail Game</a>
                         </div>
                     </div>
                 </div>

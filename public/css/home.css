@@ -76,3 +76,11 @@ nav{
     text-align: justify;
     text-justify: inter-word;
 }
+
+h5{
+    font-weight: bold;
+}
+.imgdetail{
+    width: 200px;
+    height: 200px;
+}
