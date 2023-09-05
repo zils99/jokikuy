@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 use App\Models\User;
+use App\Models\Game;
 
 class ControllerUser extends Controller
 {
@@ -63,7 +64,8 @@ class ControllerUser extends Controller
 
     public function homepengguna()
     {
-        return view('pengguna/homepengguna');
+        $datagame = Game::all();
+        return view('pengguna/homepengguna')->with('datagame', $datagame);
     }
 
     public function logout()

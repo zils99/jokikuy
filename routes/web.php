@@ -31,3 +31,7 @@ Route::post('/editprofilepengguna', [ControllerUser::class, 'editprofile']);
 Route::get('/carigame', function () {
     return view('pengguna/carigame');
 });
+
+Route::get('/detailgame', function () {
+    return view('pengguna/detailgame');
+});

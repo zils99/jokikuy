@@ -1,4 +1,4 @@
-@extends('.layout.pengguna')
+@extends('layout.pengguna')
 
 @section('container')
     <div class="isikonten">
@@ -30,45 +30,19 @@
         <h1>Game yang sering dimainkan</h1>
 
         <div class="row">
-            <div class="col-sm-4">
-                <div class="card" style="width: 25rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
-                        <p>Genre Game : </p>
-                        <a href="#" class="btn btn-primary">Buat Kontrak</a>
+            @foreach ($datagame as $game)
+                <div class="col-sm-4">
+                    <div class="card" style="width: 25rem;">
+                        <img src="{{ asset('img/' . $game['c_GambarGame']) }}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ $game['c_NamaGame'] }}</h5>
+                            <p class="card-text">{{ $game['c_DeskripsiGame'] }}</p>
+                            <p>Genre Game : </p>
+                            <a href="#" class="btn btn-primary">Buat Kontrak</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="card" style="width: 25rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
-                        <p>Genre Game : </p>
-                        <a href="#" class="btn btn-primary">Buat Kontrak</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="card" style="width: 25rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
-                        <p>Genre Game : </p>
-                        <a href="#" class="btn btn-primary">Buat Kontrak</a>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 @endsection
