@@ -10,7 +10,7 @@ body{
 }
 
 nav{
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
     background-color: #464542;
 }
 
@@ -29,4 +29,50 @@ nav{
 
 .kontakjoki{
     margin-top: 1rem;
+}
+
+.rounded-circle {
+    border-radius: 50% !important;
+}
+.card {
+    box-shadow: 0 0.15rem 1.75rem 0 rgb(33 40 50 / 15%);
+}
+
+.card-header:first-child {
+    border-radius: 0.35rem 0.35rem 0 0;
+}
+
+.card-header {
+    padding: 1rem 1.35rem;
+    margin-bottom: 0;
+    background-color: rgba(33, 40, 50, 0.03);
+    border-bottom: 1px solid rgba(33, 40, 50, 0.125);
+}
+
+.isidetail{
+    max-width: 1300px;
+}
+
+.gambargame{
+    background-color: transparent;
+}
+
+.imggame{
+    width: 300px;
+    height: 300px;
+}
+
+.img-account-profile{
+    width: 200px;
+    height: 200px;
+}
+
+.card-header{
+    font-size: 30px;
+    font-weight: 1000;
+}
+
+.deskripsigame{
+    text-align: justify;
+    text-justify: inter-word;
 }

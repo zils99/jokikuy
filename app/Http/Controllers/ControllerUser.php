@@ -21,17 +21,18 @@ class ControllerUser extends Controller
         return view('register');
     }
 
-    public function login(Request $request){
+    public function login(Request $request)
+    {
         $request->validate([
             'email' => 'required',
             'password' => 'required'
         ]);
 
         $user = User::where('c_EmailUser', '=', $request->email)->first();
-        if($user && Hash::check($request->password, $user->c_PasswordUser)){
+        if ($user && Hash::check($request->password, $user->c_PasswordUser)) {
             $request->session()->put('c_IdUser', $user->c_IdUser);
             return redirect('/homepengguna');
-        } else{
+        } else {
             return redirect('/login');
         }
     }
@@ -49,35 +50,55 @@ class ControllerUser extends Controller
         $password = bcrypt($validateData['Password']);
 
         $query = DB::table('user')->insert([
-            'c_NamaUser'=>$request->input('c_NamaUser'),
-            'c_EmailUser'=>$request->input('c_EmailUser'),
-            'c_JenisKelaminUser'=>$request->input('jeniskelamin'),
-            'c_PasswordUser'=>$password,
-            'c_RoleUser'=>$request->input('rolependaftar'),
-            'c_GambarUser'=>"http://bootdey.com/img/Content/avatar/avatar1.png"
+            'c_NamaUser' => $request->input('c_NamaUser'),
+            'c_EmailUser' => $request->input('c_EmailUser'),
+            'c_JenisKelaminUser' => $request->input('jeniskelamin'),
+            'c_PasswordUser' => $password,
+            'c_RoleUser' => $request->input('rolependaftar'),
+            'c_GambarUser' => "http://bootdey.com/img/Content/avatar/avatar1.png"
         ]);
 
         return redirect('/login');
     }
 
-    public function homepengguna(){
+    public function homepengguna()
+    {
         return view('pengguna/homepengguna');
     }
 
-    public function logout(){
-        if(Session::has('c_IdUser')){
+    public function logout()
+    {
+        if (Session::has('c_IdUser')) {
             Session::pull('c_IdUser');
             return redirect('/');
         }
     }
 
-    public function profilepengguna(){
+    public function profilepengguna()
+    {
         $user = User::where('c_IdUser', '=', session()->get('c_IdUser'))->first();
-        return view('pengguna/profilepengguna',$user);
+        return view('pengguna/profilepengguna', $user);
     }
 
-    public function editprofile(Request $request){
-        $user = User::where('c_IdUser', '=', session()->get('c_IdUser'))->first();
-        return view('pengguna/profilepengguna',$user);
+    public function editprofile(Request $request)
+    {
+        if ($request->passwordlama) {
+            $data = User::where('c_IdUser', '=', session()->get('c_IdUser'))->first();
+            if (password_verify($request->passwordlama, $data->c_PasswordUser)) {
+                $data = User::where('c_IdUser', '=', session()->get('c_IdUser'))->update([
+                    'c_PasswordUser' => $password = bcrypt($request->input('passwordbaru'))
+                ]);
+                return redirect('/profilepengguna')->with('update', 'Password Berhasil di Update');
+            } else {
+                return redirect('/profilepengguna')->with('gagal', 'Password lama tidak sama');
+            }
+        } else {
+            $data = User::where('c_IdUser', '=', session()->get('c_IdUser'))->update([
+                'c_NamaUser' => $request->input('nama'),
+                'c_EmailUser' => $request->input('email'),
+                'c_JenisKelaminUser' => $request->input('jeniskelamin')
+            ]);
+            return redirect('/profilepengguna')->with('update', 'Data User Berhasil di Update');
+        }
     }
 }
