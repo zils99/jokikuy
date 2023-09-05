@@ -72,6 +72,10 @@ nav{
     margin-right: 1rem;
 }
 
+.isidetail{
+    max-width: 1300px;
+}
+
 .gambargame{
     background-color: transparent;
 }

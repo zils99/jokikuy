@@ -36,11 +36,11 @@
         </div>
     </nav>
 
-    <div class="container-xl px-3 mt-4">
+    <div class="isidetail container-xl px-3 mt-4">
         <div class="row">
             <div class="col-xl-3">
                 <!-- Profile picture card-->
-                <div class="gambargame mb-4 mb-xl-0">
+                <div class="gambargame mb-4">
                     <div class="card-body text-center">
                         <!-- Profile picture image-->
                         <img class="imggame" src="http://bootdey.com/img/Content/avatar/avatar1.png" alt="">
@@ -79,10 +79,9 @@
         </div>
     </div>
 
-    <div class="container-xl px-3 mt-4">
+    <div class="isidetail container-xl px-3 mt-4">
         <div class="row">
             <div class="col-xl-3">
-
             </div>
             <div class="col-xl-9">
                 <div class="card mb-4">
