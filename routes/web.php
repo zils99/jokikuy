@@ -23,13 +23,11 @@ Route::get('/login', [ControllerUser::class, 'index']);
 Route::get('/register', [ControllerUser::class, 'Register']);
 Route::get('/homepengguna', [ControllerUser::class, 'homepengguna']);
 Route::get('/logout', [ControllerUser::class, 'logout']);
+Route::get('/profilepengguna', [ControllerUser::class, 'profilepengguna']);
 Route::post('/login', [ControllerUser::class, 'login']);
 Route::post('/register', [ControllerUser::class, 'TambahUser']);
+Route::post('/editprofilepengguna', [ControllerUser::class, 'editprofile']);
 
 Route::get('/carigame', function () {
     return view('pengguna/carigame');
-});
-
-Route::get('/profilepengguna', function () {
-    return view('pengguna/profilepengguna');
 });

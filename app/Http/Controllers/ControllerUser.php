@@ -70,4 +70,14 @@ class ControllerUser extends Controller
             return redirect('/');
         }
     }
+
+    public function profilepengguna(){
+        $user = User::where('c_IdUser', '=', session()->get('c_IdUser'))->first();
+        return view('pengguna/profilepengguna',$user);
+    }
+
+    public function editprofile(Request $request){
+        $user = User::where('c_IdUser', '=', session()->get('c_IdUser'))->first();
+        return view('pengguna/profilepengguna',$user);
+    }
 }

@@ -58,22 +58,25 @@
                 <div class="card mb-4">
                     <div class="card-header">Pengaturan Akun</div>
                     <div class="card-body">
-                        <form>
+                        <form action="/editprofilepengguna" method="post">
                             <div class="mb-3">
                                 <label class="small mb-1" for="inputUsername">Nama Lengkap</label>
-                                <input class="form-control" id="inputUsername" type="text" placeholder="Billy">
+                                <input class="form-control" id="inputUsername" type="text" placeholder="{{ $c_NamaUser }}" name="nama">
                             </div>
                             <div class="mb-3">
                                 <label class="small mb-1" for="inputEmailAddress">Email address</label>
                                 <input class="form-control" id="inputEmailAddress" type="email"
-                                    placeholder="testing@gmail.com">
+                                    placeholder="{{ $c_EmailUser }}" name="email">
                             </div>
                             <div class="mb-3">
                                 <label class="small mb-1" for="inputEmailAddress">Gender</label>
-                                <input class="form-control" id="inputEmailAddress" type="email"
-                                    placeholder="Laki-laki">
+                                <select class="form-select small mb-1" aria-label="Default select example">
+                                    <option selected>{{ $c_JenisKelaminUser }}</option>
+                                    <option value="Laki-laki">Laki-laki</option>
+                                    <option value="Perempuan">Perempuan</option>
+                                </select>
                             </div>
-                            <button class="btn btn-primary" type="button">Save changes</button>
+                            <button class="btn btn-primary float-end" type="button">Save changes</button>
                         </form>
                     </div>
                 </div>
@@ -87,14 +90,12 @@
                                     <label class="small mb-1" for="inputFirstName">Password Lama</label>
                                     <input class="form-control" id="inputFirstName" type="password">
                                 </div>
-                                <!-- Form Group (last name)-->
                                 <div class="col-md-6">
                                     <label class="small mb-1" for="inputLastName">Password Baru</label>
                                     <input class="form-control" id="inputLastName" type="password">
                                 </div>
                             </div>
-                            <!-- Save changes button-->
-                            <button class="btn btn-primary" type="button">Save changes</button>
+                            <button class="btn btn-primary float-end" type="button">Save changes</button>
                         </form>
                     </div>
                 </div>
