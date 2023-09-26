@@ -31,9 +31,9 @@
 
         <div class="row mb-5">
             @foreach ($datagame['game'] as $game)
-                <div class="col-sm-3">
+                <div class="col-sm-3 mb-5">
                     <div class="card">
-                        <img src="{{ asset('img/' . $game['c_GambarGame']) }}" class="card-img-top" alt="...">
+                        <img src="{{ asset('img/Logo/' . $game['c_GambarGame']) }}" class="homegame" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">{{ $game['c_NamaGame'] }}</h5>
                             <p> Genre Game : </p>

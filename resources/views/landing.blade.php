@@ -26,7 +26,7 @@
             <div class="card mx-auto">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img src="{{ asset('img/lux.png') }}" class="imglux" alt="...">
+                        <img src="{{ asset('img/asset/lux.png') }}" class="imglux" alt="...">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">

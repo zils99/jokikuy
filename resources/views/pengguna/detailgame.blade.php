@@ -8,7 +8,7 @@
                 <div class="gambargame mb-4">
                     <div class="card-body text-center">
                         <!-- Profile picture image-->
-                        <img class="imggame" src="{{ asset('img/' . $datagame['c_GambarGame']) }}" alt="">
+                        <img class="imggame" src="{{ asset('img/Logo/' . $datagame['c_GambarGame']) }}" alt="">
                         <!-- Profile picture help block-->
                         <div class="small font-italic text-muted mb-4"></div>
                     </div>

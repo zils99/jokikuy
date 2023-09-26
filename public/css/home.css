@@ -16,7 +16,7 @@ nav{
 
 .nav-link {
     margin : 0px 1rem; 
-    color: #e9e1cfbc;
+    color: #e9d6cfbc;
 }
 
 .nav-link.active {
@@ -83,4 +83,10 @@ h5{
 .imgdetail{
     width: 200px;
     height: 200px;
+}
+
+.homegame {
+    width: 300px;
+    height: 300px;
+    margin: 5px;
 }
